@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 { color: #1e3c72; margin-bottom: 4px; }
+p { color: #666; margin-bottom: 24px; }
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 24px;
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #1e3c72;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.form-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.form-grid input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 140px;
+}
+
+.header-presensi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.info-tag {
+    background-color: #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #334155;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+th { background-color: #2a5298; color: white; text-align: left; padding: 12px; }
+td { padding: 12px; border-bottom: 1px solid #eee; }
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-primary { background-color: #2a5298; color: white; }
+.btn-primary:hover { background-color: #1e3c72; }
+
+.btn-hadir { background-color: #2ec4b6; color: white; margin-right: 4px; }
+.btn-izin { background-color: #e71d36; color: white; }
+
+.btn-save {
+    background-color: #27ae60;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+.btn-save:hover { background-color: #219150; }
+
+.status-badge {
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+}
+.badge-hadir { background-color: #d4edda; color: #155724; }
+.badge-izin { background-color: #f8d7da; color: #721c24; }
+
+.table-responsive {
+    overflow-x: auto;
+}

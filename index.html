@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Presensi Voli FT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Sistem Presensi Tim Voli FT</h1>
+    <p>Panel Manajer untuk input presensi dan rekap histori latihan.</p>
+
+    <!-- Form Tambah Latihan Baru -->
+    <div class="card">
+        <h2>1. Buat Sesi Latihan Baru</h2>
+        <div class="form-grid">
+            <input type="date" id="input-tanggal">
+            <input type="time" id="input-jam">
+            <input type="text" id="input-lokasi" placeholder="Lokasi (mis: Lapangan FT / GOR)">
+            <button class="btn btn-primary" onclick="buatSesiBaru()">Buat Sesi</button>
+        </div>
+    </div>
+
+    <!-- Area Input Presensi Aktif -->
+    <div class="card" id="area-presensi" style="display: none;">
+        <div class="header-presensi">
+            <h2>2. Input Presensi Pemain</h2>
+            <span id="info-sesi" class="info-tag"></span>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Pemain</th>
+                    <th>Status Kehadiran</th>
+                </tr>
+            </thead>
+            <tbody id="tabel-presensi-body">
+                <!-- Diisi otomatis oleh JavaScript -->
+            </tbody>
+        </table>
+
+        <div style="margin-top: 20px; text-align: right;">
+            <button class="btn btn-save" onclick="simpanPermanen()">💾 Save & Lock Presensi</button>
+        </div>
+    </div>
+
+    <!-- Tabel Histori Presensi -->
+    <div class="card">
+        <h2>3. Histori Presensi Latihan</h2>
+        <div class="table-responsive">
+            <table id="tabel-histori">
+                <thead>
+                    <tr id="header-histori">
+                        <th>Nama Pemain</th>
+                        <!-- Kolom tanggal latihan bakal nambah ke kanan otomatis -->
+                    </tr>
+                </thead>
+                <tbody id="body-histori">
+                    <!-- Diisi otomatis oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
