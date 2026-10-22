@@ -1,19 +1,19 @@
 // Master Roster Pemain Tim Voli
 // Master Roster Pemain Tim Voli FT (13 Pemain)
 const daftarPemain = [
-    "Ega (Libero)",
-    "Fadhil (Allround)",
-    "Aubin (Setter)",
-    "Pascal (Open)",
-    "Gepri (Setter)",
-    "Zidan (Middle Blocker)",
-    "Nala (Middle Blocker)",
-    "Nawa (Middle Blocker)",
-    "Idoz (Libero)",
-    "Alif (Allround)",
-    "Kais (Open)",
-    "Dhany (Allround)",
-    "Alqa (Middle Blocker)"
+    "Alif",
+    "Alqa",
+    "Aubin",
+    "Dhany",
+    "Ega",
+    "Fadhil",
+    "Gepri",
+    "Idoz",
+    "Kais",
+    "Nala",
+    "Nawa",
+    "Pascal",
+    "Zidan"
 ];
 // Variable Sementara untuk Sesi yang Lagi Diisi Manajer
 let sesiAktif = null;
@@ -148,4 +148,11 @@ function renderHistori() {
 // Muat histori saat pertama kali buka website
 window.onload = function() {
     renderHistori();
+}
+
+function resetSemuaHistori() {
+    if (confirm("Yakin mau hapus semua histori presensi? Data tidak bisa dikembalikan.")) {
+        localStorage.removeItem('histori_latihan');
+        renderHistori();
+    }
 };
